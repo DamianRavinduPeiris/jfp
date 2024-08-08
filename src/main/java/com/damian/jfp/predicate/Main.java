@@ -13,22 +13,23 @@ public class Main {
         numbersList.add(100);
         numbersList.add(141);
 
-        Predicate<Integer> isOdd = (Integer i) -> i%2!=0;
-        numbersList.forEach(n->{
-            if(isOdd.test(n)){
-                logger.info(n +" is Odd!");
-            }else{
-                logger.info(n+" is Even!");
+        Predicate<Integer> isOdd = (Integer i) -> i % 2 != 0;
+        numbersList.forEach(n -> {
+            if (isOdd.test(n)) {
+                logger.info(n + " is Odd!");
+            } else {
+                logger.info(n + " is Even!");
             }
         });
         // For int we can use IntPredicate also.
-        IntPredicate isOdd2 = (int i) -> i%2!=0;
-        numbersList.forEach(n->{
-            if(isOdd2.test(n)){
-                logger.info(n +" is Odd!");
-            }else{
-                logger.info(n+" is Even!");
+        IntPredicate isOdd2 = (int i) -> i % 2 != 0;
+        numbersList.forEach(n -> {
+            if (isOdd2.test(n)) {
+                logger.info(n + " is Odd!");
+            } else {
+                logger.info(n + " is Even!");
             }
+
 
         });
     }
