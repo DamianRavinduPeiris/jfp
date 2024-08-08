@@ -12,19 +12,17 @@ public class Main {
         //Company 1.
         Employee e1 = new Employee();
         e1.setEmployeeName("Damian Peiris.");
-        setID(e1, e -> e1.getEmployeeName().trim().replaceAll(" ", "").toLowerCase() + "@wiley.com");
+        setID(e1, e -> e1.getEmployeeName().trim().replace(" ", "").toLowerCase() + "@wiley.com");
 
         //Company 2.
         Employee e2 = new Employee();
         e2.setEmployeeName("Ravindu Peiris");
-        setID(e2, e -> e2.getEmployeeName().replaceAll(" ", "").toLowerCase() + "@microsoft.com");
+        setID(e2, e -> e2.getEmployeeName().replace(" ", "").toLowerCase() + "@microsoft.com");
     }
 
 
     public static void setID(Employee employee, Function<Employee, String> employeeStringFunction) {
         employee.setEmployeeId(employeeStringFunction.apply(employee));
         logger.info("Employee ID: " + employee.getEmployeeId());
-
-
     }
 }
